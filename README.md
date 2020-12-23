@@ -32,7 +32,7 @@ r.GET("/", func(c *gin.Context) {
     limit, _ := strconv.Atoi(c.DefaultQuery("limit", "3"))
     var users []User
 
-    paginator := pagination.Pagging(&pagination.Param{
+    paginator := pagination.Paging(&pagination.Param{
         DB:      db,
         Page:    page,
         Limit:   limit,
